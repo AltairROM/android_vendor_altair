@@ -24,7 +24,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 endif
 
-ifeq ($(TARGET_BUILD_VARIANT),eng)
+ifneq ($(TARGET_BUILD_VARIANT),user)
 # Disable ADB authentication
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
 else
