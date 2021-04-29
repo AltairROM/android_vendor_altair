@@ -1,5 +1,5 @@
-# Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common.mk)
+# Inherit common Altair ROM stuff
+$(call inherit-product, vendor/altair/config/common.mk)
 
 # Inherit Lineage atv device tree
 $(call inherit-product, device/lineage/atv/lineage_atv.mk)
@@ -8,8 +8,8 @@ $(call inherit-product, device/lineage/atv/lineage_atv.mk)
 PRODUCT_PACKAGES += \
     LeanbackIME
 
-# Lineage packages
+# Altair ROM packages
 PRODUCT_PACKAGES += \
     LineageCustomizer
 
-DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/tv
+DEVICE_PACKAGE_OVERLAYS += vendor/altair/overlay/tv

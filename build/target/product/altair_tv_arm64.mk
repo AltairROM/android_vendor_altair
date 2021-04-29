@@ -12,10 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/aosp_arm_ab.mk)
-include vendor/lineage/build/target/product/lineage_generic_target.mk
+$(call inherit-product, device/google/atv/products/aosp_tv_arm64.mk)
+
+include vendor/altair/build/target/product/altair_generic_tv_target.mk
 
 TARGET_NO_KERNEL_OVERRIDE := true
-TARGET_USES_64_BIT_BINDER := true
 
-PRODUCT_NAME := lineage_arm_ab
+PRODUCT_NAME := altair_tv_arm64
+
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS :=

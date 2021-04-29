@@ -12,13 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/google/atv/products/aosp_tv_x86_64.mk)
+$(call inherit-product, build/target/product/aosp_x86_64_ab.mk)
 
-include vendor/lineage/build/target/product/lineage_generic_tv_target.mk
+include vendor/altair/build/target/product/altair_generic_target.mk
 
-PRODUCT_NAME := lineage_tv_x86_64
+PRODUCT_NAME := altair_x86_64_ab
 
-PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS :=
-
-PRODUCT_SDK_ADDON_NAME := lineage
 PRODUCT_SDK_ADDON_SYS_IMG_SOURCE_PROP := $(LOCAL_PATH)/source.properties

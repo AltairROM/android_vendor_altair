@@ -1,7 +1,7 @@
-include vendor/lineage/config/BoardConfigKernel.mk
+include vendor/altair/config/BoardConfigKernel.mk
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-include vendor/lineage/config/BoardConfigQcom.mk
+include vendor/altair/config/BoardConfigQcom.mk
 endif
 
-include vendor/lineage/config/BoardConfigSoong.mk
+include vendor/altair/config/BoardConfigSoong.mk

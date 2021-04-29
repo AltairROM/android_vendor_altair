@@ -15,29 +15,29 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_arm.mk \
-    $(LOCAL_DIR)/lineage_arm64.mk \
-    $(LOCAL_DIR)/lineage_x86.mk \
-    $(LOCAL_DIR)/lineage_x86_64.mk \
-    $(LOCAL_DIR)/lineage_arm_ab.mk \
-    $(LOCAL_DIR)/lineage_arm64_ab.mk \
-    $(LOCAL_DIR)/lineage_x86_ab.mk \
-    $(LOCAL_DIR)/lineage_x86_64_ab.mk \
-    $(LOCAL_DIR)/lineage_tv_arm.mk \
-    $(LOCAL_DIR)/lineage_tv_arm64.mk \
-    $(LOCAL_DIR)/lineage_tv_x86.mk \
-    $(LOCAL_DIR)/lineage_tv_x86_64.mk
+    $(LOCAL_DIR)/altair_arm.mk \
+    $(LOCAL_DIR)/altair_arm64.mk \
+    $(LOCAL_DIR)/altair_x86.mk \
+    $(LOCAL_DIR)/altair_x86_64.mk \
+    $(LOCAL_DIR)/altair_arm_ab.mk \
+    $(LOCAL_DIR)/altair_arm64_ab.mk \
+    $(LOCAL_DIR)/altair_x86_ab.mk \
+    $(LOCAL_DIR)/altair_x86_64_ab.mk \
+    $(LOCAL_DIR)/altair_tv_arm.mk \
+    $(LOCAL_DIR)/altair_tv_arm64.mk \
+    $(LOCAL_DIR)/altair_tv_x86.mk \
+    $(LOCAL_DIR)/altair_tv_x86_64.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_arm-userdebug \
-    lineage_arm64-userdebug \
-    lineage_x86-userdebug \
-    lineage_x86_64-userdebug \
-    lineage_arm_ab-userdebug \
-    lineage_arm64_ab-userdebug \
-    lineage_x86_ab-userdebug \
-    lineage_x86_64_ab-userdebug \
-    lineage_tv_arm-userdebug \
-    lineage_tv_arm64-userdebug \
-    lineage_tv_x86-userdebug \
-    lineage_tv_x86_64-userdebug
+    altair_arm-userdebug \
+    altair_arm64-userdebug \
+    altair_x86-userdebug \
+    altair_x86_64-userdebug \
+    altair_arm_ab-userdebug \
+    altair_arm64_ab-userdebug \
+    altair_x86_ab-userdebug \
+    altair_x86_64_ab-userdebug \
+    altair_tv_arm-userdebug \
+    altair_tv_arm64-userdebug \
+    altair_tv_x86-userdebug \
+    altair_tv_x86_64-userdebug
