@@ -110,8 +110,7 @@ PRODUCT_PACKAGES += \
 # Altair ROM packages
 PRODUCT_PACKAGES += \
     LineageParts \
-    LineageSettingsProvider \
-    Updater
+    LineageSettingsProvider
 
 # Themes
 PRODUCT_PACKAGES += \
