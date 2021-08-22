@@ -9,3 +9,6 @@ else
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.launcher.blur.appLaunch=0
 endif
+
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
