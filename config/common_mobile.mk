@@ -54,13 +54,6 @@ PRODUCT_PACKAGES += \
     LineageRedAccent \
     LineageYellowAccent
 
-# Dark mode backgrounds
-PRODUCT_PACKAGES += \
-    LineageBlackBackground \
-    LineageDarkGrayBackground \
-    LineageMatteBlackBackground \
-    LineageSolarizedBackground
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
