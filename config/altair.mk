@@ -1,10 +1,3 @@
-# Dark mode backgrounds
-PRODUCT_PACKAGES += \
-    LineageBlackBackground \
-    LineageDarkGrayBackground \
-    LineageMatteBlackBackground \
-    LineageSolarizedBackground
-
 # Blur
 ifneq ($(TARGET_DISABLE_BLUR), true)
 PRODUCT_PRODUCT_PROPERTIES += \
