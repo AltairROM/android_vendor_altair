@@ -40,20 +40,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3
 endif
 
-# Accents
-PRODUCT_PACKAGES += \
-    LineageBlackTheme \
-    LineageBlackAccent \
-    LineageBlueAccent \
-    LineageBrownAccent \
-    LineageCyanAccent \
-    LineageGreenAccent \
-    LineageOrangeAccent \
-    LineagePinkAccent \
-    LineagePurpleAccent \
-    LineageRedAccent \
-    LineageYellowAccent
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
