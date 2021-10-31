@@ -192,8 +192,27 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/crowdin/overlay
 PRODUCT_VERSION_MAJOR = 11
 PRODUCT_VERSION_MINOR = 0
 
-LINEAGE_VERSION := Altair-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)
-LINEAGE_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)
+# Set LINEAGE_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
+
+ifndef LINEAGE_BUILDTYPE
+    ifdef RELEASE_TYPE
+        # Starting with "LINEAGE_" is optional
+        RELEASE_TYPE := $(shell echo $(RELEASE_TYPE) | sed -e 's|^LINEAGE_||g')
+        LINEAGE_BUILDTYPE := $(RELEASE_TYPE)
+    endif
+endif
+
+# Filter out random types, so it'll reset to UNOFFICIAL
+ifeq ($(filter RELEASE OFFICIAL,$(LINEAGE_BUILDTYPE)),)
+    LINEAGE_BUILDTYPE := UNOFFICIAL
+    DISPLAY_BUILDTYPE := Unofficial
+else
+    LINEAGE_BUILDTYPE := OFFICIAL
+    DISPLAY_BUILDTYPE := Official
+endif
+
+LINEAGE_VERSION := Altair-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(DISPLAY_BUILDTYPE)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)
+LINEAGE_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(DISPLAY_BUILDTYPE)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
