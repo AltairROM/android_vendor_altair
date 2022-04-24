@@ -32,4 +32,11 @@
 
     <!-- Whether vibrate icon is shown in the status bar by default. -->
     <integer name="def_statusBarVibrateIconEnabled">1</integer>
+
+    <integer name="def_screen_off_timeout">120000</integer>
+
+    <bool name="def_screen_brightness_automatic_mode">true</bool>
+
+    <!-- Default for Settings.System.VIBRATE_WHEN_RINGING -->
+    <bool name="def_vibrate_when_ringing">true</bool>
 </resources>
