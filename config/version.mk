@@ -1,7 +1,7 @@
 PRODUCT_VERSION_MAJOR = 12
 PRODUCT_VERSION_MINOR = 1
 
-LINEAGE_BUILD_DATE := $(shell date -u +%Y%m%d)
+LINEAGE_BUILD_DATE := $(shell date +%Y%m%d)
 
 # Set LINEAGE_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
