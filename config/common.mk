@@ -1,7 +1,7 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/altair.mk)
-$(call inherit-product-if-exists, packages/overlays/Lineage/config.mk)
+$(call inherit-product-if-exists, packages/overlays/Altair/config.mk)
 
 PRODUCT_BRAND ?= Altair ROM
 
