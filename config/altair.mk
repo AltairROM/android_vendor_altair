@@ -40,3 +40,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Enable dex2oat64 to do dexopt
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
+
+# Extra packages
+PRODUCT_PACKAGES += \
+    BatteryStatsViewer
