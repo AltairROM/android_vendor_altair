@@ -396,6 +396,7 @@ def main():
             if revision is None:
                 revision = project.get("revision", default_revision)
 
+        name = name.replace("AltairROM", "LineageOS")
         if name not in project_name_to_data:
             project_name_to_data[name] = {}
         revision = revision.split("refs/heads/")[-1]
@@ -496,7 +497,7 @@ def main():
         ):
             local_branch = list(project_name_to_data[review["project"]])[0]
             project_path = project_name_to_data[review["project"]][local_branch]
-            print(
+            args.quiet or print(
                 'WARNING: Project {0} has a different branch ("{1}" != "{2}")'.format(
                     project_path, local_branch, review["branch"]
                 )
@@ -590,7 +591,7 @@ def main():
         def filter_picked(item):
             # Check if change is already picked to HEAD...HEAD~check_picked_count
             if item["change_id"] in picked_change_ids:
-                print(
+                args.quiet or print(
                     "Skipping {0} - already picked in {1}".format(
                         item["id"], project_path
                     )
