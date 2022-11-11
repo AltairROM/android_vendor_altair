@@ -1,0 +1,1 @@
+# Altair ROM specific configuration
