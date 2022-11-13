@@ -78,14 +78,8 @@ PRODUCT_PACKAGES += \
     IconPackVictorLauncherOverlay \
     IconPackVictorSettingsOverlay \
     IconPackVictorSystemUIOverlay \
-    IconShapePebbleOverlay \
-    IconShapeRoundedRectOverlay \
-    IconShapeSquareOverlay \
-    IconShapeSquircleOverlay \
-    IconShapeTaperedRectOverlay \
-    IconShapeTeardropOverlay \
-    IconShapeVesselOverlay \
-    LineageNavigationBarNoHint
+    LineageNavigationBarNoHint \
+    NavigationBarMode2ButtonOverlay
 
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
