@@ -59,3 +59,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ThemePicker \
     ThemesStub
+
+PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/mobile
