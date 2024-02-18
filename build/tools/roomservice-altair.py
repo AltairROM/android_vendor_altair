@@ -2,7 +2,7 @@
 
 # Copyright (C) 2013 Cybojenix <anthonydking@gmail.com>
 # Copyright (C) 2013 The OmniROM Project
-# Copyright (C) 2020 The Altair ROM Project
+# Copyright (C) 2020-2024 The Altair ROM Project
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -25,6 +25,8 @@ from xml.etree import ElementTree as ES
 # Use the urllib importer from the Cyanogenmod roomservice
 try:
     # For python3
+    import urllib.error
+    import urllib.parse
     import urllib.request
 except ImportError:
     # For python2
@@ -110,7 +112,7 @@ def iterate_manifests():
         try:
             man = ES.parse(file)
             man = man.getroot()
-        except IOError, ES.ParseError:
+        except (IOError, ES.ParseError):
             print("WARNING: error while parsing %s" % file)
         else:
             for project in man.findall("project"):
@@ -163,7 +165,7 @@ def append_to_manifest(project):
     try:
         lm = ES.parse('/'.join([local_manifest_dir, "roomservice.xml"]))
         lm = lm.getroot()
-    except IOError, ES.ParseError:
+    except (IOError, ES.ParseError):
         lm = ES.Element("manifest")
     lm.append(project)
     return lm
