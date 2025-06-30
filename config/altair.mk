@@ -25,15 +25,17 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.input.video_enabled=false
 
-# Blurs
-ifeq ($(TARGET_ENABLE_BLUR), true)
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sf.blurs_are_expensive=1 \
-    ro.surface_flinger.supports_background_blur=1
+# Enable blur
+TARGET_ENABLE_BLUR ?= false
+ifeq ($(TARGET_ENABLE_BLUR),true)
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.custom.blur.enable=true
+else
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.custom.blur.enable=false
 endif
 
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.launcher.blur.appLaunch=0
+PRODUCT_SYSTEM_PROPERTIES += ro.surface_flinger.supports_background_blur=1
 
 # Disable async MTE on a few processes
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
